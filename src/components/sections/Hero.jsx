@@ -2,15 +2,23 @@ import { motion } from "framer-motion";
 import ShinyButton from "../ui/ShinyButton";
 import Section from "../ui/Section";
 import { ArrowRight, Globe } from "lucide-react";
+import heroBg from '../../assets/hero-bg.jpg';
 
 const Hero = () => {
     return (
         <Section className="min-h-screen flex items-center justify-center pt-32 overflow-hidden">
-            {/* Animated Background Mesh */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-brand-dark" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-cyan/10 via-brand-dark to-brand-dark" />
+            {/* Hero Background */}
+            <div className="absolute inset-0 -z-10">
+                <img
+                    src={heroBg}
+                    alt="Background"
+                    className="w-full h-full object-cover opacity-40"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
+            </div>
 
+            {/* Animated Overlay Effects */}
+            <div className="absolute inset-0 z-0">
                 {/* Animated Grid Lines */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
 

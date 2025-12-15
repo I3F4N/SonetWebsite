@@ -6,6 +6,8 @@ import Services from './components/sections/Services';
 import WhyUs from './components/sections/WhyUs';
 import Contact from './components/sections/Contact';
 
+import Partners from './components/sections/Partners';
+
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +15,7 @@ function App() {
         <Navbar />
         <main>
           <Hero />
+          <Partners />
           <Services />
           <WhyUs />
           <Contact />

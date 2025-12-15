@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import ShinyButton from '../ui/ShinyButton';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +30,10 @@ const Navbar = () => {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-bold tracking-tighter text-white">
-                    SONET<span className="text-brand-cyan">.</span>
+                <Link to="/" className="flex items-center gap-2">
+                    <img src={logo} alt="Sonet" className="h-12 w-auto object-contain" />
                 </Link>
 
                 {/* Desktop Links */}
